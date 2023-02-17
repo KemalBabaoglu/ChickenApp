@@ -1,0 +1,64 @@
+@import "colors";
+@import "media-queries";
+
+
+
+
+.hero{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        padding: 20px;
+    
+
+        &_container-left{
+            margin: 0 auto;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        
+
+            h1{ font-size: 3rem;
+                line-height: 120px;
+            color: $green;
+        @include mobile{font-size: 1.5rem;}
+    
+    }
+            h2{font-size: 1.6rem;
+                line-height: 60px;
+            color: $orangeRed;
+            @include mobile{font-size: 1.2rem;}}
+            p{   line-height: 50px;}
+            button{
+                padding: 10px 20px;
+                background: $green;
+                border-radius: 6px;
+                margin-left: 10px;
+                border: none;
+                &:hover{
+                    background-color: $orangeRed;
+                    transition: all 0.5s ease;
+                }
+                a{color: $light;
+                text-decoration: none;}
+            }
+            
+            
+        }
+        &_container-right{
+            margin: 0 auto;
+            img{height: 500px;
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 50px;
+        }
+        }
+        @include tablet{
+            grid-template-columns: 1fr;
+            gap: 50px;
+       
+        }
+}
+
